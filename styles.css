@@ -1,0 +1,873 @@
+/* Kiara Reid */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Molle&family=Montserrat&display=swap');
+
+:root{
+    --yellow: #F6D64A;
+    --teal: #55BCD5;
+    --purple: #9B26B0;
+    --blue: #499BD2;
+    --dk-gray: #222222;
+    --lt-gray: #EAEAEA;
+    --white: #FFFFFF;
+    --black: #000000;
+}
+
+h1, h2, h3{
+    font-family: 'Molle', cursive;
+}
+h4, p, q, small, nav, button, form{
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* body{
+	width: 768px;
+} */
+
+#skip{
+    position:absolute;
+    left:-10000px;
+    top:auto;
+    width:1px;
+    height:1px;
+    overflow:hidden;
+}
+
+/* text size */
+
+h1{
+	font-size: 40px;
+	padding-left: 26px;
+}
+
+h2{
+	font-size: 32px;
+	padding-left: 26px;
+	padding-bottom: 10px;
+}
+
+h3{
+	font-size: 32px;
+	margin-bottom: 16px;
+	padding-left: 26px;
+}
+
+
+p, q, nav a, form, label {
+  font-size: 12px;
+}
+
+header p{
+	font-size: 16px;
+ 	padding-right: 30px;
+	margin-bottom: 0px;
+}
+
+p{
+	line-height: 1.6rem;
+	padding-left: 26px;
+	padding-right: 26px;
+	margin-bottom: 10px;
+}
+
+/* header */
+header {
+    background: var(--teal);
+    background: linear-gradient(180deg, var(--teal) 0%, var(--white) 100%);
+}
+
+header img {
+    width: 140px;
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+
+
+/* menu */
+
+.sr-only{
+	visibility: hidden;
+}
+
+#menu-toggle {
+    display: block;
+}
+
+#menu-toggle label {
+    position: absolute;
+    display: flex;
+    right: 0px;
+    width: 160px;
+    top: 30px;
+    height: 40px;
+    background-color: var(--yellow);
+    z-index: 2;
+    text-transform: uppercase;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+}
+
+#menu-toggle input {
+    display: block;
+    position: absolute;
+    cursor: pointer;
+    left: -10000px;
+    width: 0;
+    height: 0;
+    opacity: 0;
+}
+
+#menu-toggle a {
+    display: block;
+    text-decoration: none;
+    color: var(--black);
+    font-weight: bold;
+}
+
+#menu-toggle a:visited {
+    color: var(--black);
+}
+
+#menu-toggle li:hover {
+    background-color: var(--yellow);
+}
+
+#menu-toggle ul {
+    position: absolute;
+    top: 40px;
+    padding: 0;
+    max-height: 0;
+    width: 100%;
+    text-align: center;
+    text-transform: uppercase;
+    background-color: var(--teal);
+    list-style-type: none;
+}
+
+#menu-toggle ul li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+	border-bottom: solid 1px var(--black);
+}
+
+#menu-toggle input ~ ul {
+    display: none;
+} 
+
+#menu-toggle input:checked ~ ul {
+    display: block;
+    max-height: 500px;
+} 
+
+#menu-toggle input:checked ~ label {
+    display: flex;
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    height: 40px;
+    background-color: var(--black);
+    color: var(--white);
+}
+
+/* intro */
+
+#intro {
+    padding-bottom: 20px;
+} 
+
+#img-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    gap: 10px;
+    margin: 0 auto;
+}
+
+#img-grid img, #img-grid picture {
+    width: 100%;
+    height: 260px;
+	object-fit: cover;
+}
+
+/* plan */
+
+#plan {
+	margin-top: 5px;
+    background-color: var(--yellow);
+	padding-top: 30px;
+	padding-bottom: 18px;
+	margin-bottom: 40px;
+}
+
+#plan h4 {
+  	font-weight: 600;
+  	text-transform: uppercase;
+	font-size: 20px;
+	margin-bottom: 30px;
+}
+
+#plan img {
+    width: 130px;
+	height: 130px;
+}
+
+#plan div {
+    display: flex;
+    flex-direction: column;
+    gap: 7px; 
+	justify-content: center;
+	align-items: center;
+}
+
+#plan div section{
+	background-color: var(--teal);
+	display: flex;
+    flex-direction: column;
+	border: var(--white) solid 2px;
+    border-radius: 10px;
+    text-align: center;
+	width: 270px;
+	padding: 20px 0;
+}
+
+#testimonials {
+    padding: 0 26px;
+	padding-bottom: 20px;
+}
+
+#testimonials div {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#testimonials div section {
+    display: flex;
+    flex-direction: column;
+    text-align: center; 
+    justify-content: center;
+}
+
+#testimonials img {
+    margin: 0 auto;
+	width: 150px;
+}
+
+#testimonials h4 {
+    font-weight: bold;
+	text-transform: uppercase;
+	font-size: 22px;
+	margin-top: 10px;
+}
+
+#testimonials p{
+	margin-bottom: 0;
+	font-size: 14px;
+	line-height: 1.4rem;
+	font-weight: 100;
+}
+
+#testimonials q{
+	font-size: 14px;
+	font-style: italic;
+	line-height: 1rem;
+	padding: 0 35px;
+	font-weight: 100;
+}
+
+#testimonials q:before {
+    content: "\201C";
+}
+
+#testimonials q:after {
+    content: "\201D";
+}
+
+/* about */
+
+#about {
+    background-color: var(--blue);
+}
+
+#about h3{
+	padding-top: 25px;
+}
+
+#about h4{
+	text-transform: uppercase;
+	font-size: 14px;
+	font-weight: 700;
+}
+
+#about div {
+    padding: 8px 20px;
+    display: grid;
+    grid-template-columns: auto auto;
+	margin: 0 40px;
+}
+
+#about div section {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    text-align: center;
+	width: 100px;
+}
+
+#about img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    margin-bottom: 10px; 
+}
+
+#about p{
+	line-height: 1rem;
+	padding: 5px 0;
+}
+
+/* contact */
+#contact{
+	padding-top: 20px;
+}
+
+#contact .form-required{
+	font-family: 'Montserrat', sans-serif;
+	font-size: 15px;
+	font-style: italic;
+}
+
+#contact label, legend{
+	font-weight: 700;
+	font-size: 15px;
+	text-transform: uppercase;
+}
+
+#contact .required{
+	font-weight: 100;
+	color: var(--purple);
+}
+
+#fName, #lName, #email, #phone {
+    width: 100%;
+    height: 50px;
+    margin-bottom: 20px;
+    border: var(--purple) solid 2px;
+    padding-left: 20px;
+    box-sizing:border-box;
+	font-size: 16px;
+}
+
+#contact form{
+	padding: 0 30px;
+}
+
+.radio-label{
+	text-transform: none;
+	font-weight: 100;
+	font-size: 16px;
+}
+
+fieldset label{
+    display: flex;
+    align-items: center;
+}
+
+fieldset{
+	margin-bottom: 20px;
+}
+
+#contact input::placeholder{
+    font-family: 'Montserrat', sans-serif;
+    color: var(--black);
+	font-size: 16px;
+}
+
+.radio-input {
+    display: inline-block;
+    position: relative;
+    padding: 10px 10px 10px 0;
+}
+
+.radio-input input[type="radio"] {
+    display: none;
+}
+
+.radio-control {
+	display: inline-block;
+	border: 2px solid var(--purple);
+	cursor: pointer;
+	width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    position: relative;
+    vertical-align: middle;
+}
+
+.radio-control::after {
+    background: var(--purple);
+	position: absolute;
+	content: '';
+	border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+}
+
+
+.radio-input input[type="radio"]:checked + .radio-control::after {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+#prefEmail, #prefText, #prefPhone {
+    width: 50px;
+    height: 50px;
+}
+
+.custom-select select {
+	font-family: 'Montserrat', sans-serif;
+    border: var(--purple) solid 2px;
+	color: var(--dk-gray);
+	width: 100%;
+    height: 50px;
+    padding-left: 10px;
+    font-size: 16px;
+    margin-bottom: 20px;
+    box-sizing:border-box;
+}
+
+input[type=submit] {
+    display: block;
+	background-color: var(--purple);
+    color: var(--white);
+	font-size: 16px;
+    width: 100%;
+    height: 56px;
+    font-weight: 400;
+    border: 0px;
+    text-transform: uppercase;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+    background-color: var(--lt-gray);
+    padding: 10px 0;
+}
+
+footer p {
+    font-size: 14px;
+}
+
+footer a {
+    text-decoration: none;
+    color: var(--black);
+	font-size: 14px;
+	font-weight: 400;
+	margin-bottom: 10px;
+}
+
+@media screen and (min-width: 768px) {
+
+	header h1{
+		padding: 50px 0 10px 0;
+	}
+
+	header p{
+		padding-right: 170px;
+	}
+
+	header h2{
+		font-size: 0;
+		padding-bottom: 0;
+	}
+
+    header img{
+        width: 230px;
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+
+    #menu-toggle label {
+        display: none;
+    }
+
+    #menu-toggle ul {
+        position: static;
+        display: block;
+        background-color: transparent;
+        margin: 20px 0 50px 0;
+    }
+
+    #menu-toggle ul li{
+        width: 150px;
+		height: 56px;
+        background-color: var(--white);
+		border-bottom: none;
+    }
+
+    #menu-toggle input ~ ul {
+        display: flex;
+        max-height: 70px;
+        gap: 20px;
+        justify-content: center;
+    } 
+
+    header a{
+        float: left;
+		font-size: 16px;
+    }
+
+
+	p {
+		padding-bottom: 0;
+		font-size: 18px;
+		line-height: 1.6rem;
+		padding-left: 60px;
+        padding-right: 60px;
+	}
+
+    #intro h2{
+        padding-left: 60px;
+        padding-right: 60px;
+		padding-bottom: 10px;
+		font-size: 40px;
+    }
+
+	h3{
+		font-size: 40px;
+		padding-left: 0;
+	}
+
+    #img-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); 
+        grid-auto-rows: 300px; 
+        gap: 20px; 
+        padding: 0 60px;
+    }
+    
+    #img-grid img {
+        width: 100%; 
+        height: auto; 
+        display: block;
+    }
+    
+    #img-grid img:nth-child(1), 
+    #img-grid img:nth-child(2) {
+        grid-column: span 1; 
+        height: 100%; 
+    }
+    
+    #img-grid picture {
+        grid-column: 1 / -1; 
+        height: 100%;
+    }
+
+    #plan {
+		margin-bottom: 0;
+        padding: 40px 60px;
+    }
+
+	#plan div section{
+		width: auto;
+		border: var(--white) solid 3px;
+	}
+
+    #plan div {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;    
+    }
+
+    #plan img {
+        width: 200px;
+        height: 200px;
+    }
+
+    #testimonials {
+        padding: 30px 60px;
+    }
+	
+
+	#testimonials img{
+		width: 200px;
+		height: 200px;
+	}
+
+    #testimonials div {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;  
+    }
+
+	#testimonials div section{
+		justify-content: initial;
+	}
+
+    #testimonials h4 {
+        font-size: 28px;
+		margin-bottom: 10px;
+    }
+
+    #testimonials p, #testimonials q{
+        font-size: 22px;
+    }
+
+	#testimonials q{
+		line-height: 1.6rem;
+		font-weight: 100;
+		padding: 0;
+	}
+
+    #about {
+        padding: 10px 60px;
+    }
+
+    #about div {
+        grid-template-columns: auto auto auto auto;
+		padding: 0;
+		margin: 0 20px;
+    }
+
+    #about img {
+        width: auto;
+        height: 100px;
+        object-fit: contain;
+        margin-bottom: 10px; 
+    }
+
+	#contact{
+		padding: 60px;
+	}
+
+	#contact form{
+		padding: 0;
+	}
+	
+    fieldset {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    input[type=submit]{
+        display: block;
+        width: 50%;
+        margin-left: auto;
+        margin-right: 0;
+    }
+
+    footer {
+        flex-direction: row;
+        padding: 20px 60px;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    footer a, footer p {
+        font-size: 16px;
+		padding-left: 0;
+		padding-right: 0;
+		margin-bottom: 0;		
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    header h1 {
+        padding-top: 40px;
+        font-size: 60px;
+        padding-bottom: 5px;
+    }
+
+    #menu-toggle {
+        position: absolute;
+        right: 0px;
+        top: 0px;
+    }
+
+    #menu-toggle ul {
+        margin: 0px;
+    }
+
+    #menu-toggle ul li {
+        height: 40px;
+    }
+
+    article {
+        padding: 80px 0;
+    }
+
+    #intro {
+        display: grid;
+        grid-template-columns: 1fr 1.2fr;
+        grid-template-rows: 1fr 11fr;
+        gap: 0;
+        padding: 40px;
+    }
+
+
+    #intro p {
+        grid-column: 1/2;
+        padding-right: 0;
+		font-size: 22px;
+		line-height: 2rem;
+    }
+
+    #img-grid {
+        grid-column: 2/3;
+        grid-row: 1/3;
+        justify-self: start;
+        padding: 0px;
+    }
+
+    #plan {
+        padding: 80px;
+    }
+
+	#plan h4{
+		font-size: 30px;
+	}
+
+    #plan div {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: 10px;    
+    }
+
+    #plan img {
+        width: 200px;
+        height: 200px;
+    }
+
+    #testimonials {
+        padding: 80px;
+    }
+
+    #testimonials div {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: 10px;  
+    }
+
+    #testimonials h4 {
+        font-size: 30px;
+    }
+
+    #testimonials p, #testimonials q {
+        font-size: 22px;
+    }
+
+    #about {
+        padding: 60px 80px;
+    }
+
+    #about div {
+        justify-content: center;
+        gap: 70px;
+    }
+
+	#about div section{
+		width: 200px;
+		margin: 0 20px;
+	}
+
+	#about h4{
+		font-size: 30px;
+	}
+
+	#about p{
+		font-size: 16px;
+	}
+
+	#about img{
+		height: 150px;
+	}
+
+    #contact {
+        padding: 80px;
+    }
+
+    form {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 16px;
+    }
+
+    fieldset {
+        margin-bottom: 20px;
+    }
+
+    .custom-select select {
+        height: 50px;
+        margin-bottom: 20px;
+    }
+
+    footer {
+        display: grid;
+        grid-template-columns: 4.5fr 1fr 1fr;
+    }
+
+    footer p {
+        justify-self: start;
+    }   
+
+    footer {
+        padding: 30px 80px;
+    }
+} 
